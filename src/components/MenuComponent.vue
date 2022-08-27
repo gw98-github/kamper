@@ -15,6 +15,10 @@
         >
           <span>{{ item.name }}</span></router-link
         >
+        <a class="button" href="/files/regulamin.pdf" download>
+          <span>Regulamin</span>
+        </a>
+
         <a
           href="https://www.facebook.com/wdroge.wynajemkamperow/"
           target="_blank"
@@ -64,6 +68,9 @@
         >
           <span @click="openMenu">{{ item.name }}</span></router-link
         >
+        <a class="button" href="/files/regulamin.pdf" download>
+          <span>Regulamin</span>
+        </a>
         <div class="icons">
           <a
             href="https://www.facebook.com/wdroge.wynajemkamperow/"
@@ -111,7 +118,6 @@ export default {
         { name: "Kalendarz", href: "/calendar" },
         { name: "Cennik", href: "/price-list" },
         { name: "Galeria", href: "/gallery" },
-        { name: "Regulamin", href: "/terms-of-service" },
         { name: "Kontakt", href: "/contact" },
       ],
     };

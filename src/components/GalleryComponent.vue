@@ -29,26 +29,22 @@
       <div class="spinner"></div>
     </div>
     <div class="modal-value" v-show="imageLoaded">
-      <button
-        class="nav-button prev"
+      <next-image-button
         v-if="currentImageIndex != 0"
         @click="prevImage"
-      >
-        <span>&#9664;</span>
-      </button>
+        class="prev"
+      ></next-image-button>
       <img
         class="modal-image"
         :src="currentImage"
         alt=""
         @load="imageLoaded = true"
       />
-      <button
+      <next-image-button
         v-if="currentImageIndex != imagesArray.length - 1"
         @click="nextImage"
-        class="nav-button next"
-      >
-        <span>&#9658;</span>
-      </button>
+        class="next"
+      ></next-image-button>
     </div>
   </div>
 </template>
@@ -56,8 +52,10 @@
 <script>
 /* eslint-disable no-unused-vars */
 import firebaseImages from "../services/firebaseImages.js";
+import NextImageButton from "./NextImageButton.vue";
 import { getDownloadURL } from "firebase/storage";
 export default {
+  components: { NextImageButton },
   data() {
     return {
       imagesArray: [],
@@ -181,37 +179,16 @@ export default {
   padding: 1rem;
   border-radius: 0.3rem;
 }
-
-.nav-button {
-  position: fixed;
-  cursor: pointer;
-  border-radius: 50%;
-  background: #c42217;
-  font-size: xx-large;
-  height: 50px;
-  width: 50px;
-  border: none;
-  opacity: 0.7;
-  color: white;
-}
-
-.nav-button:hover {
-  opacity: 1;
-  transition: 0.2s ease-in-out;
-}
-.nav-button.prev {
-  position: fixed;
+.prev {
+  position: fixed !important;
   top: 50%;
-  padding-top: 5px;
-  padding-left: 1px;
-  transform: translateX(20px);
+  left: calc(20% - 50px);
 }
-.nav-button.next {
-  position: fixed;
+.next {
+  position: fixed !important;
   top: 50%;
-  padding-top: 3px;
-  padding-left: 11px;
-  transform: translateX(-70px);
+  transform: rotate(180deg);
+  left: 80%;
 }
 .spinner-container {
   padding-top: 2em;
@@ -247,20 +224,6 @@ export default {
   }
   .modal-value {
     padding: 0.5em;
-  }
-  .nav-button.prev {
-    position: fixed;
-    top: 50%;
-    padding-top: 5px;
-    padding-left: 1px;
-    transform: translateX(5px);
-  }
-  .nav-button.next {
-    position: fixed;
-    top: 50%;
-    padding-top: 3px;
-    padding-left: 11px;
-    transform: translateX(-55px);
   }
 }
 </style>

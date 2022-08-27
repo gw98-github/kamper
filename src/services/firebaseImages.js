@@ -7,6 +7,7 @@ class ImagesService {
   }
   getImage(name) {
     const storage = getStorage();
+    name = name.replace(".jpg", ".webp");
     return ref(storage, name);
   }
 }

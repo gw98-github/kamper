@@ -1,23 +1,27 @@
 <template>
-  <div class="grid">
-    <div class="header-item">Sezon</div>
-    <div class="header-item">Kiedy?</div>
-    <div class="header-item">
-      Wymagania
-      <div class="header-item-details">(min. okres wynajmu kampera)</div>
-    </div>
-    <div class="header-item">
-      Cena za dobę
-      <div class="header-item-details">(wszystkie ceny zawierają 23% VAT)</div>
-    </div>
+  <div class="wrapper">
+    <div class="grid">
+      <div class="header-item">Sezon</div>
+      <div class="header-item">Kiedy?</div>
+      <div class="header-item">
+        Wymagania
+        <div class="header-item-details">(min. okres wynajmu kampera)</div>
+      </div>
+      <div class="header-item">
+        Cena za dobę
+        <div class="header-item-details">
+          (wszystkie ceny zawierają 23% VAT)
+        </div>
+      </div>
 
-    <div
-      class="grid-val"
-      v-for="(item, index) in dataArray"
-      :key="index"
-      :class="{ price: (index + 1) % 4 == 0 }"
-      v-html="item"
-    ></div>
+      <div
+        class="grid-val"
+        v-for="(item, index) in dataArray"
+        :key="index"
+        :class="{ price: (index + 1) % 4 == 0 }"
+        v-html="item"
+      ></div>
+    </div>
   </div>
 </template>
 
@@ -50,13 +54,17 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.wrapper {
+  padding: 3rem;
+}
 .grid {
   display: grid;
+  max-width: 800px;
+  margin: auto;
   grid-template-columns: 2fr repeat(3, 3fr);
   grid-template-rows: 2fr 3fr 3fr 3fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  gap: 0.6rem;
   justify-items: center;
   padding: 2em 0.5em;
   align-items: top;
@@ -65,12 +73,21 @@ export default {
   font-size: 16px;
   font-weight: 600;
   text-align: center;
+  padding: 0.3rem;
+  height: 100%;
+  width: 100%;
+  border: 1px solid black;
 }
 .grid-val {
-  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 20px;
+  padding: 0.3rem;
+  height: 100%;
+  width: 100%;
+  border: 1px solid black;
   font-weight: 400;
-  padding: 0.5em 0 1em 0;
 }
 .grid-val.price {
   color: #c42217;
@@ -94,6 +111,9 @@ export default {
   .header-item-details {
     font-size: 10px;
   }
+  .wrapper {
+    padding: 2rem;
+  }
 }
 
 @media only screen and (max-width: 800px) {
@@ -108,6 +128,9 @@ export default {
   }
   .header-item-details {
     font-size: 10px;
+  }
+  .wrapper {
+    padding: 1rem;
   }
 }
 </style>

@@ -14,15 +14,16 @@
         class="image"
         :src="image"
         @click="openModal(i)"
-        alt=""
+        alt="zdjęcie kampera"
         @load="this.imagesArrayLoaded[i] = true"
+        :title="'zdjęcie kampera nr ' + i"
       />
     </div>
   </div>
   <div
     class="modal-overlay"
     v-if="showModal"
-    @click.self="showModal = false"
+    @click.self="closeModal()"
     @touchmove.prevent
   >
     <div v-show="!imageLoaded" style="margin-top: 45vh">
@@ -37,7 +38,8 @@
       <img
         class="modal-image"
         :src="currentImage"
-        alt=""
+        alt="Current image"
+        title="Current image"
         @load="imageLoaded = true"
       />
       <next-image-button
@@ -107,6 +109,7 @@ export default {
     },
     closeModal() {
       this.showModal = false;
+      this.currentImage = "";
     },
     openModal(i) {
       this.getImage(this.imagesNamesArray[i]);

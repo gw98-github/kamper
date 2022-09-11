@@ -2,8 +2,8 @@
   <div class="menu" v-if="windowWidth > 800">
     <div class="top-panel">
       <div class="logo">
-        <router-link to="/"
-          ><img class="logo" :src="logo" alt=""
+        <router-link to="/" title="Home"
+          ><img class="logo" :src="logo" alt="W drogę!" title="W drogę!"
         /></router-link>
       </div>
       <div class="button-panel">
@@ -11,34 +11,44 @@
           :to="item.href"
           v-for="item in items"
           :key="item.name"
+          :title="item.name"
           :class="['button', { active: item.href === current }]"
         >
           <span>{{ item.name }}</span></router-link
         >
-        <a class="button" href="/files/regulamin.pdf" download>
+        <a
+          class="button"
+          href="/files/regulamin.pdf"
+          download
+          title="Regulamin"
+        >
           <span>Regulamin</span>
         </a>
 
         <a
           href="https://www.facebook.com/wdroge.wynajemkamperow/"
           target="_blank"
+          title="Instagram"
         >
           <img
             class="ig-icon"
             :src="require('@/assets/icon-ig2.svg')"
-            alt=""
+            alt="Instagram"
             srcset=""
+            title="Instagram"
           />
         </a>
         <a
           href="https://www.facebook.com/wdroge.wynajemkamperow/"
           target="_blank"
+          title="Facebook"
         >
           <img
             class="fb-icon"
             :src="require('@/assets/icon-fb.svg')"
-            alt=""
+            alt="Facebook"
             srcset=""
+            title="Facebook"
           />
         </a>
       </div>

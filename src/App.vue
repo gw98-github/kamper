@@ -1,5 +1,6 @@
 <template>
-  <menu-component id="menu"></menu-component>
+  <header><menu-component id="menu"></menu-component></header>
+
   <div class="components"><router-view></router-view></div>
 
   <footer>
@@ -9,6 +10,7 @@
       <a
         href="https://www.linkedin.com/in/grzegorz-wa%C5%BCny-0676341a3/"
         target="_blank"
+        title="Author"
       >
         G.Ważny</a
       >

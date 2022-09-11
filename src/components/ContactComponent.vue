@@ -5,7 +5,12 @@
       poprzez:
     </div>
     <div class="contact-element">
-      <img :src="require('@/assets/icon-phone.svg')" alt="" srcset="" />
+      <img
+        :src="require('@/assets/icon-phone.svg')"
+        alt="telefon"
+        srcset=""
+        title="numer telefonu"
+      />
       <div
         class="value"
         @click="copyStringToClipboard(phone)"
@@ -15,13 +20,19 @@
         <img
           :src="require('@/assets/icon-copy.svg')"
           class="copy-icon"
-          alt=""
+          alt="kopiuj telefon"
           srcset=""
+          title="kopiuj telefon"
         />
       </div>
     </div>
     <div class="contact-element">
-      <img :src="require('@/assets/icon-mail.svg')" alt="" srcset="" />
+      <img
+        :src="require('@/assets/icon-mail.svg')"
+        alt="email"
+        srcset=""
+        title="adres email"
+      />
       <div
         class="value"
         @click="copyStringToClipboard(email)"
@@ -31,8 +42,9 @@
         <img
           :src="require('@/assets/icon-copy.svg')"
           class="copy-icon"
-          alt=""
+          alt="kopiuj email"
           srcset=""
+          title="kopiuj email"
         />
       </div>
     </div>

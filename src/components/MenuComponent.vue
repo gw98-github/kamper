@@ -3,7 +3,13 @@
     <div class="top-panel">
       <div class="logo">
         <router-link to="/" title="Home"
-          ><img class="logo" :src="logo" alt="W drogę!" title="W drogę!"
+          ><img
+            class="logo"
+            :src="logo"
+            alt="W drogę!"
+            title="W drogę!"
+            height="64"
+            width="184"
         /></router-link>
       </div>
       <div class="button-panel">
@@ -36,6 +42,8 @@
             alt="Instagram"
             srcset=""
             title="Instagram"
+            height="53"
+            width="53"
           />
         </a>
         <a
@@ -49,6 +57,8 @@
             alt="Facebook"
             srcset=""
             title="Facebook"
+            height="53"
+            width="53"
           />
         </a>
       </div>
@@ -57,14 +67,25 @@
   <div class="menu" v-else>
     <div class="top-panel">
       <div class="logo">
-        <router-link to="/"><img class="logo" :src="logo" /></router-link>
+        <router-link to="/"
+          ><img
+            class="logo"
+            :src="logo"
+            alt="W drogę!"
+            title="W drogę!"
+            height="64"
+            width="184"
+        /></router-link>
       </div>
 
       <div>
         <img
           class="menu-icon"
           :src="require('@/assets/icon-menu.svg')"
-          alt=""
+          alt="Menu"
+          title="Menu"
+          height="80"
+          width="80"
           @click="openMenu"
         />
       </div>
@@ -89,8 +110,11 @@
             <img
               class="ig-icon"
               :src="require('@/assets/icon-ig2.svg')"
-              alt=""
+              alt="Instagram"
               srcset=""
+              title="Instagram"
+              height="64"
+              width="64"
             />
           </a>
           <a
@@ -100,8 +124,11 @@
             <img
               class="fb-icon"
               :src="require('@/assets/icon-fb.svg')"
-              alt=""
+              alt="Facebook"
               srcset=""
+              title="Facebook"
+              height="64"
+              width="64"
             />
           </a>
         </div>

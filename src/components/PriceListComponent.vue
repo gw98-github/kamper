@@ -57,6 +57,7 @@ export default {
 <style scoped>
 .wrapper {
   padding: 3rem;
+  transform: scale(1.2);
 }
 .grid {
   display: grid;
@@ -122,6 +123,7 @@ export default {
   }
   .wrapper {
     padding: 2rem;
+    transform: scale(1);
   }
 }
 
@@ -140,6 +142,7 @@ export default {
   }
   .wrapper {
     padding: 1rem;
+    transform: scale(1);
   }
 }
 </style>

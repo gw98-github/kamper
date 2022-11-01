@@ -57,11 +57,10 @@ export default {
 <style scoped>
 .wrapper {
   padding: 3rem;
-  transform: scale(1.2);
 }
 .grid {
   display: grid;
-  max-width: 800px;
+  max-width: 1100px;
   margin: auto;
   grid-template-columns: 2fr repeat(3, 3fr);
   grid-template-rows: 2fr 3fr 3fr 3fr;
@@ -70,7 +69,7 @@ export default {
   padding: 5rem 0.5rem;
 }
 .header-item {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   text-align: center;
   padding: 0.3rem;
@@ -87,7 +86,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
+  font-size: 22px;
   padding: 0.3rem;
   height: 100%;
   width: 100%;
@@ -102,7 +101,7 @@ export default {
 .grid-val.price {
   color: #c42217;
   font-weight: 600;
-  font-size: 24px;
+  font-size: 26px;
 }
 .header-item-details {
   font-size: 12px;
@@ -123,7 +122,6 @@ export default {
   }
   .wrapper {
     padding: 2rem;
-    transform: scale(1);
   }
 }
 
@@ -142,7 +140,6 @@ export default {
   }
   .wrapper {
     padding: 1rem;
-    transform: scale(1);
   }
 }
 </style>

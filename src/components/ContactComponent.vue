@@ -162,7 +162,8 @@ export default {
   }
   .value {
     font-size: 18px;
-    overflow-wrap: break-word;
+    text-align: center;
+    overflow-wrap: anywhere;
   }
   img {
     max-height: 80px;

@@ -212,7 +212,7 @@ export default {
   background: white;
   text-decoration: none;
   padding: 1em;
-  margin: 0.44em;
+  margin: 0.3rem;
   text-transform: uppercase;
   border-radius: 0.5em;
   /* border: #c52118 1px solid; */
@@ -274,7 +274,7 @@ export default {
 @media only screen and (max-width: 1100px) and (min-width: 800px) {
   .button {
     font-size: 12px;
-    margin: 0.8em;
+    margin: 0.65em;
     padding: 0;
     /* padding: 0.5em; */
   }

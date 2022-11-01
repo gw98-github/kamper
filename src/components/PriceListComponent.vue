@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <div class="grid">
-      <div class="header-item">Sezon</div>
+      <div class="header-item first">Sezon</div>
       <div class="header-item">Kiedy?</div>
       <div class="header-item">
         Wymagania
@@ -18,7 +18,7 @@
         class="grid-val"
         v-for="(item, index) in dataArray"
         :key="index"
-        :class="{ price: (index + 1) % 4 == 0 }"
+        :class="{ price: (index + 1) % 4 == 0, first: index % 4 === 0 }"
         v-html="item"
       ></div>
     </div>
@@ -66,8 +66,7 @@ export default {
   grid-template-rows: 2fr 3fr 3fr 3fr;
   gap: 0.6rem;
   justify-items: center;
-  padding: 2em 0.5em;
-  align-items: top;
+  padding: 5rem 0.5rem;
 }
 .header-item {
   font-size: 16px;
@@ -77,6 +76,11 @@ export default {
   height: 100%;
   width: 100%;
   border: 1px solid black;
+  border-right: none;
+  border-top: none;
+}
+.header-item.first {
+  border-left: none;
 }
 .grid-val {
   display: flex;
@@ -87,7 +91,12 @@ export default {
   height: 100%;
   width: 100%;
   border: 1px solid black;
+  border-right: none;
+  border-bottom: none;
   font-weight: 400;
+}
+.grid-val.first {
+  border-left: none;
 }
 .grid-val.price {
   color: #c42217;

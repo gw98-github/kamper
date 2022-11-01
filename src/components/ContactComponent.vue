@@ -134,7 +134,7 @@ export default {
   height: 20px;
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1100px) and (min-width: 800px) {
   .container {
     width: 90%;
   }
@@ -147,6 +147,25 @@ export default {
   .copy-icon {
     width: 18px;
     height: 18px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .container {
+    width: 90%;
+  }
+  .text-info {
+    font-size: 18px;
+  }
+  .contact-element {
+    margin-top: 3em;
+  }
+  .value {
+    font-size: 18px;
+    overflow-wrap: break-word;
+  }
+  img {
+    max-height: 80px;
   }
 }
 </style>

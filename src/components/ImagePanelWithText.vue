@@ -1,11 +1,7 @@
 <template>
-  <div class="container" v-if="windowWidth > 800">
+  <div class="container">
     <div class="elem"><slot name="elem1"></slot></div>
     <div class="elem"><slot name="elem2"></slot></div>
-  </div>
-  <div v-else>
-    <div class="elem"><slot name="elem2"></slot></div>
-    <div class="elem"><slot name="elem1"></slot></div>
   </div>
 </template>
 

@@ -67,20 +67,21 @@ export default {
       rgba(255, 255, 255, 0.5)
     ),
     url("../assets/images/IMG-6754.webp");
-  aspect-ratio: 16 / 11;
-  background-size: contain;
+  /* aspect-ratio: 16 / 11; */
+  background-size: cover;
   background-position-y: bottom;
   background-position-x: center;
   background-attachment: fixed;
+  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
   @media only screen and (min-width: 700px) and (max-width: 1024px) {
-    background-size: cover;
     align-items: flex-start;
   }
   @media only screen and (max-width: 700px) {
-    background-size: cover;
+    background-position-y: -100px;
+    background-repeat: no-repeat;
     align-items: flex-start;
   }
 }
@@ -107,19 +108,19 @@ export default {
   height: 500px;
 }
 @media only screen and (max-width: 800px) {
-  .main-element {
+  /* .main-element {
     aspect-ratio: 9 / 12;
-  }
+  } */
   .placeholder {
     background: red;
     width: 100%;
     height: 300px;
   }
 }
-@media only screen and (min-width: 600px) and (max-width: 1200px) {
-  .main-element {
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+  /* .main-element {
     aspect-ratio: 1;
-  }
+  } */
   .main-element__text {
     margin-top: 10%;
   }

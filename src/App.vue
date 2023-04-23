@@ -34,7 +34,7 @@ body {
 }
 html {
   height: 100%;
-  background: #b1b0b0;
+  background: #e7e7e7;
 }
 
 .components {

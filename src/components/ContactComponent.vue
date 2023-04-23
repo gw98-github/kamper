@@ -93,7 +93,6 @@ export default {
   z-index: 0 !important;
 }
 .text-info {
-  font-family: "Montserrat";
   font-size: 22px;
   margin-top: 3em;
 
@@ -113,10 +112,10 @@ export default {
   display: flex;
   flex-direction: row;
   align-items: center;
+  text-decoration: underline;
   gap: 0.3em;
   margin-top: 0.1em;
   font-size: 26px;
-  font-family: "Montserrat";
   padding: 0.2em 0.5em;
   margin-left: 1.1em;
   border-radius: 0.5em;

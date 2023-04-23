@@ -47,12 +47,11 @@ html {
 
   @media (min-width: 700px) {
     width: 90vw;
-    margin-top: 6em;
   }
 
   @media (min-width: 1024px) {
     width: 80vw;
-    margin-top: 7em;
+    margin-top: 6em;
   }
 }
 #app {

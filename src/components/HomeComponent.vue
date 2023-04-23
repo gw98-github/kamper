@@ -1,6 +1,8 @@
 <template>
   <div>
-    <div class="main-element">LOREM IPSUM</div>
+    <div class="main-element">
+      <div class="main-element__text">Coś tutaj bym napisał</div>
+    </div>
     <image-panel-with-text>
       <template #elem1
         >Przedstawiamy bardzo komfortowy kamper dla 6 osób. Dzięki alkowie,
@@ -11,7 +13,7 @@
         Duży aneks kuchenny wyposażony we wszystkie sprzęty oraz naczynia
         pozwala na przygotowanie prawdziwej uczty w samym środku lasu, nad
         brzegiem jeziora lub z widokiem na góry. Takie widoki mają najepsze
-        widoki :)
+        hotele :)
         <br />
         <br />
         Podróżując naszym kamperem jesteście w 100% niezależni. Posiadamy solary
@@ -60,8 +62,44 @@ export default {
 
 <style scoped>
 .main-element {
-  background: green;
-  aspect-ratio: 16 / 9;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("../assets/images/IMG-6754.webp");
+  aspect-ratio: 16 / 11;
+  background-size: contain;
+  background-position-y: bottom;
+  background-position-x: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media only screen and (min-width: 700px) and (max-width: 1024px) {
+    background-size: cover;
+    align-items: flex-start;
+  }
+  @media only screen and (max-width: 700px) {
+    background-size: cover;
+    align-items: flex-start;
+  }
+}
+.main-element__text {
+  background-color: white;
+  opacity: 1;
+  padding-bottom: 5rem;
+  border: 2px solid black;
+  border-radius: 0.3em;
+  color: black;
+  width: 80%;
+  height: 40%;
+  margin-bottom: 20%;
+  @media only screen and (max-width: 800px) {
+    width: 80%;
+    height: 40%;
+    text-align: center;
+    margin-top: 20%;
+  }
 }
 .placeholder {
   background: red;
@@ -70,12 +108,20 @@ export default {
 }
 @media only screen and (max-width: 800px) {
   .main-element {
-    aspect-ratio: 9 / 16;
+    aspect-ratio: 9 / 12;
   }
   .placeholder {
     background: red;
     width: 100%;
     height: 300px;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 1200px) {
+  .main-element {
+    aspect-ratio: 1;
+  }
+  .main-element__text {
+    margin-top: 10%;
   }
 }
 </style>

@@ -38,12 +38,22 @@ html {
 }
 
 .components {
-  width: 90vw;
+  width: 100vw;
   margin: auto;
-  margin-top: 7em;
+  margin-top: 5em;
   background: white;
   /* border-radius: 0.4em; */
   min-height: calc(100vh - 12em);
+
+  @media (min-width: 700px) {
+    width: 90vw;
+    margin-top: 6em;
+  }
+
+  @media (min-width: 1024px) {
+    width: 80vw;
+    margin-top: 7em;
+  }
 }
 #app {
   height: 100%;

@@ -28,7 +28,9 @@
           download
           title="Regulamin"
         >
-          <span>Regulamin</span>
+          <span
+            >Regulamin <font-awesome-icon :icon="['fas', 'download']"
+          /></span>
         </a>
 
         <a
@@ -84,8 +86,8 @@
           :src="require('@/assets/icon-menu.svg')"
           alt="Menu"
           title="Menu"
-          height="80"
-          width="80"
+          height="30"
+          width="30"
           @click="openMenu"
         />
       </div>
@@ -100,7 +102,9 @@
           <span @click="openMenu">{{ item.name }}</span></router-link
         >
         <a class="button" href="/files/regulamin.pdf" download>
-          <span>Regulamin</span>
+          <span
+            >Regulamin <font-awesome-icon :icon="['fas', 'download']"
+          /></span>
         </a>
         <div class="icons">
           <a
@@ -227,7 +231,7 @@ export default {
 .active {
   color: #c42217;
   transition: ease-in 0.2s;
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 .logo {
   height: 4em;
@@ -289,7 +293,6 @@ export default {
 
 @media only screen and (max-width: 800px) {
   .button {
-    font-size: large;
     margin: 0;
   }
   .button:hover {
@@ -299,12 +302,12 @@ export default {
     transform: scale(1.1);
   }
   .ig-icon {
-    height: 4em;
-    margin: 1em;
+    height: 3em;
+    margin: 0.5em;
   }
   .fb-icon {
-    height: 4em;
-    margin: 1em;
+    height: 3em;
+    margin: 0.5em;
   }
 }
 </style>

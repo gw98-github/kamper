@@ -61,7 +61,6 @@ export default {
 <style scoped>
 .main-element {
   background: green;
-  width: 90vw;
   aspect-ratio: 16 / 9;
 }
 .placeholder {

@@ -34,7 +34,7 @@
         </a>
 
         <a
-          href="https://www.facebook.com/wdroge.wynajemkamperow/"
+          href="https://instagram.com/wypozyczalniawdroge?igshid=YmMyMTA2M2Y="
           target="_blank"
           title="Instagram"
         >
@@ -108,7 +108,7 @@
         </a>
         <div class="icons">
           <a
-            href="https://www.facebook.com/wdroge.wynajemkamperow/"
+            href="https://instagram.com/wypozyczalniawdroge?igshid=YmMyMTA2M2Y="
             target="_blank"
           >
             <img

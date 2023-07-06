@@ -106,9 +106,9 @@ html {
     align-items: flex-start;
   }
   @media only screen and (max-width: 700px) {
-    background-position-y: -100px;
     background-repeat: no-repeat;
     align-items: flex-start;
+    background-attachment: scroll;
   }
 }
 .main-element__text {

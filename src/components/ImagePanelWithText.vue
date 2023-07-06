@@ -36,6 +36,9 @@ export default {
 .elem {
   padding: 25px;
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 @media screen and (min-width: 1200px) {
   .elem {

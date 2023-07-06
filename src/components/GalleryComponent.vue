@@ -132,7 +132,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .gallery {
   padding: 2em 0.5em;
   display: flex;

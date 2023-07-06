@@ -34,7 +34,6 @@ export default {
   flex-direction: row;
 }
 .elem {
-  font-size: larger;
   padding: 25px;
   width: 50%;
 }

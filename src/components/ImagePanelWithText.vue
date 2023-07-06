@@ -37,6 +37,12 @@ export default {
   padding: 25px;
   width: 50%;
 }
+@media screen and (min-width: 1200px) {
+  .elem {
+    font-size: large;
+  }
+}
+
 @media only screen and (max-width: 800px) {
   .container {
     flex-direction: column;

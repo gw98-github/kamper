@@ -113,11 +113,11 @@ html {
 }
 .main-element__text {
   background: white;
-  margin-top: 10%;
+  margin-top: 20%;
   border: 10px solid hsla(0, 0%, 100%, 0.5);
   background-clip: padding-box;
   color: black;
-  width: 80%;
+  width: 60%;
   height: fit-content;
   margin-bottom: 20%;
   display: flex;
@@ -126,7 +126,6 @@ html {
   @media only screen and (max-width: 800px) {
     width: 80%;
     text-align: center;
-    margin-top: 20%;
   }
 }
 
